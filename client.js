@@ -1,4 +1,5 @@
 const net = require('net');
+const { setInterval } = require('timers');
 
 /**
  * Establishes connection with the game server
@@ -15,9 +16,19 @@ const connect = function() {
 
     // tells server name value
     conn.write('Name: EA');
+    
+    // setInterval(() => {
+    //   // tells server command "up"
+    //   conn.write('Move: up');
+      
+    // }, 1000);
+    // conn.write('Move: right');
 
-    // tells server command "up"
-    conn.write('Move: up');
+    // setTimeout(() => {
+    //   conn.write('Move: right');
+    // }, 1000);
+
+
   })
 
   // upon receival of data, message to client that data has come and show what data is
