@@ -23,6 +23,10 @@ const setupInput = function(conn) {
         conn.write("Move: left");
       } else if (key === 'd') {
         conn.write("Move: right");
+      } else if (key === 'r') {
+        conn.write("Say: Sup");
+      } else if (key === 't') {
+        conn.write("Say: King snake");
       }
     }
   

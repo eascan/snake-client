@@ -1,13 +1,15 @@
 const net = require('net');
-const { setInterval } = require('timers');
-const name = "EA"
+const { IP, PORT, name } = require('./constants');
+
+// const { setInterval } = require('timers');
+
 /**
  * Establishes connection with the game server
  */
 const connect = function() {
   const conn = net.createConnection({ 
-    host: '135.23.222.131',
-    port: 50542
+    host: IP,
+    port: PORT
   });
   // interpret incoming data as text
   conn.setEncoding('utf8'); 
@@ -41,4 +43,4 @@ const connect = function() {
   return conn;
 }
 
-module.exports = {connect};
+module.exports = { connect };
