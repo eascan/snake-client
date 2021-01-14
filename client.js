@@ -1,6 +1,6 @@
 const net = require('net');
 const { setInterval } = require('timers');
-
+const name = "EA"
 /**
  * Establishes connection with the game server
  */
@@ -15,7 +15,7 @@ const connect = function() {
     console.log('Successfully connected to game server');
 
     // tells server name value
-    conn.write('Name: EA');
+    conn.write(`Name: ${name}`);
     
     // setInterval(() => {
     //   // tells server command "up"
